@@ -1,8 +1,8 @@
 ---
 slug: mcp
-id: ""
+id: hilrx6t2prck
 type: challenge
-title: "Module 3: MCP"
+title: 'Module 3: MCP'
 teaser: A second source of tools. Each MCP call becomes its own Temporal activity.
 notes:
 - type: text
@@ -23,34 +23,41 @@ notes:
     What that buys is a retry policy and a history entry per MCP call, instead
     of an opaque call somewhere inside the agent loop.
 tabs:
-- title: Worker
+- id: puwpxzyrpcro
+  title: Worker
   type: terminal
   hostname: workshop
   workdir: /root/workshop/modules/03-mcp/exercise
-- title: Starter
+- id: axuxo4f6mr5p
+  title: Starter
   type: terminal
   hostname: workshop
   workdir: /root/workshop/modules/03-mcp/exercise
-- title: Temporal UI
+- id: 0j5hfgkojapy
+  title: Temporal UI
   type: service
   hostname: workshop
+  path: /
   port: 8233
-  path: /
-- title: Network Control Panel
+- id: 29xv3b2dxuou
+  title: Network Control Panel
   type: service
   hostname: workshop
-  port: 5000
   path: /
-- title: Editor
+  port: 5000
+- id: ylsuoscnhvfi
+  title: Editor
   type: code
   hostname: workshop
   path: /root/workshop/modules/03-mcp/exercise
-- title: Solution
+- id: rnjpn4g8za0d
+  title: Solution
   type: code
   hostname: workshop
   path: /root/workshop/modules/03-mcp/solution
 difficulty: basic
 timelimit: 1800
+enhanced_loading: null
 ---
 
 # MCP

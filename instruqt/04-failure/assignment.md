@@ -1,9 +1,10 @@
 ---
 slug: failure
-id: ""
+id: 2vhgrncqaukq
 type: challenge
-title: "Module 4: Break It"
-teaser: Kill the network, kill the worker, then decide which failures deserve a retry at all.
+title: 'Module 4: Break It'
+teaser: Kill the network, kill the worker, then decide which failures deserve a retry
+  at all.
 notes:
 - type: text
   contents: |-
@@ -22,34 +23,41 @@ notes:
 
     Temporal retries by default. Deciding what not to retry is your job.
 tabs:
-- title: Worker
+- id: akoaefbbf1sb
+  title: Worker
   type: terminal
   hostname: workshop
   workdir: /root/workshop/modules/04-failure/exercise
-- title: Starter
+- id: 59gibrpiqw8w
+  title: Starter
   type: terminal
   hostname: workshop
   workdir: /root/workshop/modules/04-failure/exercise
-- title: Temporal UI
+- id: ikdgiol1bimg
+  title: Temporal UI
   type: service
   hostname: workshop
+  path: /
   port: 8233
-  path: /
-- title: Network Control Panel
+- id: 0wfp19d7ma5g
+  title: Network Control Panel
   type: service
   hostname: workshop
-  port: 5000
   path: /
-- title: Editor
+  port: 5000
+- id: yfuljjpg5wd2
+  title: Editor
   type: code
   hostname: workshop
   path: /root/workshop/modules/04-failure/exercise
-- title: Solution
+- id: ltmtlm6ykyyb
+  title: Solution
   type: code
   hostname: workshop
   path: /root/workshop/modules/04-failure/solution
 difficulty: basic
 timelimit: 1800
+enhanced_loading: null
 ---
 
 # Break It

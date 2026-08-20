@@ -1,9 +1,10 @@
 ---
 slug: durable-agent
-id: ""
+id: hsgvycyrrlxr
 type: challenge
-title: "Module 1: A Durable Agent"
-teaser: An OpenAI Agents SDK agent inside a Temporal workflow. Durable before it has a single tool.
+title: 'Module 1: A Durable Agent'
+teaser: An OpenAI Agents SDK agent inside a Temporal workflow. Durable before it has
+  a single tool.
 notes:
 - type: text
   contents: |-
@@ -23,34 +24,41 @@ notes:
 
     In exchange, the loop runs under a worker instead of in your terminal.
 tabs:
-- title: Worker
+- id: iehqdefclung
+  title: Worker
   type: terminal
   hostname: workshop
   workdir: /root/workshop/modules/01-durable-agent/exercise
-- title: Starter
+- id: olmoryeiojnt
+  title: Starter
   type: terminal
   hostname: workshop
   workdir: /root/workshop/modules/01-durable-agent/exercise
-- title: Temporal UI
+- id: qdpy5gfxk3jp
+  title: Temporal UI
   type: service
   hostname: workshop
+  path: /
   port: 8233
-  path: /
-- title: Network Control Panel
+- id: sxqfxzkbctnf
+  title: Network Control Panel
   type: service
   hostname: workshop
-  port: 5000
   path: /
-- title: Editor
+  port: 5000
+- id: nlrelalh7xpw
+  title: Editor
   type: code
   hostname: workshop
   path: /root/workshop/modules/01-durable-agent/exercise
-- title: Solution
+- id: gvdlvmbx7yvx
+  title: Solution
   type: code
   hostname: workshop
   path: /root/workshop/modules/01-durable-agent/solution
 difficulty: basic
 timelimit: 1800
+enhanced_loading: null
 ---
 
 # A Durable Agent

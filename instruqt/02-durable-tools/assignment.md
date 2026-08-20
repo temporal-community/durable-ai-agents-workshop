@@ -1,9 +1,10 @@
 ---
 slug: durable-tools
-id: ""
+id: sxdytzvteq2z
 type: challenge
-title: "Module 2: Durable Tools"
-teaser: Tools become Temporal activities. Every tool call gets a retry policy and a history entry.
+title: 'Module 2: Durable Tools'
+teaser: Tools become Temporal activities. Every tool call gets a retry policy and
+  a history entry.
 notes:
 - type: text
   contents: |-
@@ -23,34 +24,41 @@ notes:
 
     They also stop being plain Python. They only run under a worker now.
 tabs:
-- title: Worker
+- id: oxby4sshbwi0
+  title: Worker
   type: terminal
   hostname: workshop
   workdir: /root/workshop/modules/02-durable-tools/exercise
-- title: Starter
+- id: i5kasie7q4qg
+  title: Starter
   type: terminal
   hostname: workshop
   workdir: /root/workshop/modules/02-durable-tools/exercise
-- title: Temporal UI
+- id: zwrmotvqoswl
+  title: Temporal UI
   type: service
   hostname: workshop
+  path: /
   port: 8233
-  path: /
-- title: Network Control Panel
+- id: vgo6iasnkmor
+  title: Network Control Panel
   type: service
   hostname: workshop
-  port: 5000
   path: /
-- title: Editor
+  port: 5000
+- id: ibybpcyyr6qy
+  title: Editor
   type: code
   hostname: workshop
   path: /root/workshop/modules/02-durable-tools/exercise
-- title: Solution
+- id: mxz0q10n5qhs
+  title: Solution
   type: code
   hostname: workshop
   path: /root/workshop/modules/02-durable-tools/solution
 difficulty: basic
 timelimit: 1800
+enhanced_loading: null
 ---
 
 # Durable Tools

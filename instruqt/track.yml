@@ -1,7 +1,8 @@
 slug: temporal-durable-ai-agents-modules
-id: ""
+id: ov7ek31f3rvz
 title: Building Durable AI Agents
-teaser: Four modules from a bare agent to one that survives an outage. OpenAI Agents SDK, MCP, and Temporal.
+teaser: Four modules from a bare agent to one that survives an outage. OpenAI Agents
+  SDK, MCP, and Temporal.
 description: |-
   Most AI agents fall apart the first time something goes wrong. A tool call
   fails, an API times out, a long-running loop loses its place.
@@ -45,5 +46,8 @@ lab_config:
   theme:
     name: modern-dark
   override_challenge_layout: true
+  hideStopButton: false
   default_layout: AssignmentLeft
   default_layout_sidebar_size: 33
+checksum: "14939117327326326387"
+enhanced_loading: false

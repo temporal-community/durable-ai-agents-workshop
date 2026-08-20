@@ -11,9 +11,7 @@ with workflow.unsafe.imports_passed_through():
 
     from agents import Agent, Runner
 
-INSTRUCTIONS = """
-You are a helpful assistant. Answer the user's question directly and concisely.
-"""
+INSTRUCTIONS = "You are a concise, helpful assistant."
 
 
 @workflow.defn

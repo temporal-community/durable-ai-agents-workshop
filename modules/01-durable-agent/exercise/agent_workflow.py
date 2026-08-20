@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from temporalio import workflow
+from temporalio.exceptions import ApplicationError
 
 with workflow.unsafe.imports_passed_through():
     # Pre-imported so the workflow sandbox snapshots pydantic before the first Agent(...).
@@ -28,4 +29,4 @@ class AgentWorkflow:
         # )
         # result = await Runner.run(agent, input=question)
         # return result.final_output
-        raise NotImplementedError
+        raise ApplicationError("TODO not implemented", non_retryable=True)

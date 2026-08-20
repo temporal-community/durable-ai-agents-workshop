@@ -1,7 +1,9 @@
 # Module 4: Break It
 
-The module 3 agent, unchanged, put under three kinds of failure. This module is mostly running and
-watching. The one code change teaches the judgement call Temporal cannot make for you.
+The module 3 agent, put under three kinds of failure. The workflow gains one addition, a 10-second
+pause before the agent starts, so the worker-kill demo has a reliable window instead of racing an
+LLM response. This module is mostly running and watching; the one TODO teaches the judgement call
+Temporal cannot make for you.
 
 ## 1. The network goes away
 
@@ -22,15 +24,17 @@ OPENAI_BASE_URL=http://127.0.0.1:1 uv run python -m worker
 
 ## 2. The worker dies
 
-With a workflow mid-loop, kill the worker hard:
+Start a workflow, then immediately kill the worker hard:
 
 ```bash
 pkill -9 -f "04-failure"
 ```
 
-`-9` matters. A polite `SIGTERM` lets the SDK drain the in-flight activity, which is not the failure
-you want to demonstrate. Restart the worker. The same workflow, the same run id, picks up where it
-stopped, because the loop's state lives in event history and not in that process.
+`-9` matters. A polite `SIGTERM` lets the SDK drain whatever it is holding, which is not the failure
+you want to demonstrate. You have 10 seconds before the agent makes its first call, that pause is a
+`workflow.sleep(...)`, itself a durable timer, not a trick. Restart the worker. The same workflow,
+the same run id, picks up where it stopped, because the loop's state lives in event history and not
+in that process.
 
 ## 3. Failures that should not be retried
 

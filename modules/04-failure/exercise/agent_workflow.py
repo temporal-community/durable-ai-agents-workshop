@@ -42,6 +42,13 @@ class AgentWorkflow:
 
         sessions = stateless_mcp_server(name="sessions", cache_tools_list=True)
 
+        # A durable pause, not a demo trick: workflow.sleep is a timer, recorded
+        # in history like anything else. It gives you a fixed window to kill the
+        # worker before the agent starts calling tools, instead of racing an LLM
+        # response of unpredictable length.
+        workflow.logger.info("Pausing 10s - kill the worker any time in this window.")
+        await workflow.sleep(timedelta(seconds=10))
+
         agent = Agent(
             name="Conference Assistant",
             instructions=INSTRUCTIONS.format(date=today),

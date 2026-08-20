@@ -104,18 +104,21 @@ Nothing restarted. The starter never knew. You wrote no retry code.
 
 ## 2. Kill the Worker
 
-Start another long workflow from the [button label="Starter" background="#444CE7"](tab-1) terminal,
-then, while it is mid-loop, kill the worker from that same terminal:
+Start a workflow from the [button label="Starter" background="#444CE7"](tab-1) terminal, then kill
+the worker within the next 10 seconds:
 
 ```bash,run
 pkill -9 -f "modules/04-failure"
 ```
 
-The `-9` matters. A polite `SIGTERM` lets the SDK drain the activity it is holding, which is not the
+Those 10 seconds are not a race against the model. The workflow pauses on a
+`workflow.sleep(...)` before it calls anything, so you have a fixed, reliable window every time.
+
+The `-9` matters. A polite `SIGTERM` lets the SDK drain whatever it is holding, which is not the
 failure worth demonstrating.
 
 The [button label="Temporal UI" background="#444CE7"](tab-2) tab shows the workflow still
-**Running**, with a pending activity nobody is working on. Bring the worker back in the
+**Running**, parked on a `TimerStarted` event with no pending activity. Bring the worker back in the
 [button label="Worker" background="#444CE7"](tab-0) terminal:
 
 ```bash,run

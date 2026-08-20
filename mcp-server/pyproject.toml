@@ -1,0 +1,12 @@
+[project]
+name = "sessions-mcp-server"
+version = "0.1.0"
+description = "A tiny MCP server over a local conference schedule"
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = [
+    "mcp>=1.27.0",
+]
+
+[tool.uv]
+package = false

@@ -14,6 +14,10 @@ A series of progressive demos that build an AI agent in Python using the [OpenAI
 
 📚 **Content Creator** | [LinkedIn](https://www.linkedin.com/in/nikolayadvolodkin/) | [YouTube](https://www.youtube.com/ultimateqa?sub_confirmation=1) | [Blog](https://ultimateqa.com/blog) 
 
+## PyCon AU: a 2-hour module track
+
+This branch (`pycon-au`) adds a shorter, standalone path: four modules (`module-1-durable-agent` through `module-4-failure`) that walk from a bare durable agent to one that survives an outage, without the F1 MCP server, HITL, multi-agent, or Java. See [README-modules.md](README-modules.md) for the local run, and [Instruqt track](#instruqt-track) below for the sandbox.
+
 ## Inspiration
 
 This workshop was inspired by [Cornelia Davis'](https://www.linkedin.com/in/corneliadavis/) original [AI Agents Workshop](https://github.com/temporal-community/ai-agents-workshop-python).
@@ -63,37 +67,42 @@ Demos 2–6 also send traces to OpenAI's trace dashboard at https://platform.ope
 ```
 ai-agents-workshop-v4/
 ├── README.md                                  # this file
+├── README-modules.md                          # local run for the pycon-au module track
+├── justfile                                   # Instruqt CLI wrapper (moved to repo root on this branch)
 ├── instruqt/                                  # Instruqt track definition (assignment.md per challenge, Dockerfile, etc.)
-├── demo1-agentic-loop/
+│   └── _hidden/                                # demos 1-6b, parked and unpublished on this branch
+├── mcp-server/                                 # shared FastMCP stdio server (modules 3-4)
+├── module-1-durable-agent/
 │   ├── exercise/                              # TODOs for you to fill in
 │   └── solution/                              # finished reference
+├── module-2-durable-tools/
+│   ├── exercise/
+│   └── solution/
+├── module-3-mcp/
+│   ├── exercise/
+│   └── solution/
+├── module-4-failure/
+│   ├── exercise/
+│   └── solution/
+├── demo1-agentic-loop/                         # not part of the pycon-au track; see README-modules.md
 ├── demo2-openai-temporal-integration/
-│   ├── exercise/
-│   └── solution/
 ├── demo3-mcp/
-│   ├── exercise/
-│   └── solution/
 ├── demo4-hitl/
-│   ├── exercise/
-│   └── solution/
 ├── demo5-multi-agent/
-│   ├── exercise/
-│   └── solution/
-├── demo6a-different-sdks/                      # heterogeneity axis 1: different frameworks
-│   ├── exercise/
-│   └── solution/
-└── demo6b-different-languages/                 # heterogeneity axis 2: different language (Java/Spring AI)
-    ├── exercise/
-    │   └── travel-planner-java/                # Java + Spring AI travel-planner worker (Nexus)
-    └── solution/
-        └── travel-planner-java/
+├── demo6a-different-sdks/
+└── demo6b-different-languages/
 ```
 
 ## Instruqt track
 
-This repo is also the source for a hands-on Instruqt lab: four challenges that walk an attendee through demos 2, 4, 5, and 6b in a browser-based sandbox, no local setup required.
+This repo is also the source for a hands-on Instruqt lab. On the `pycon-au` branch it publishes
+a different track: four challenges walking through `module-1-durable-agent` through
+`module-4-failure`, plus a closing quiz, in a browser-based sandbox with no local setup required.
 
-Everything under `instruqt/_hidden/` is excluded from the track — currently demos 1, 3, and 6a plus the environment-setup prologue. Instruqt only treats numbered top-level directories as challenges, so the content stays in the repo without being published. Restoring one means moving it back out and renumbering the active directories so they stay sequential, which Instruqt requires.
+Everything under `instruqt/_hidden/` is excluded from the track. That is where demos 1-6b live on
+this branch, parked but not deleted. Instruqt only treats numbered top-level directories as
+challenges, so the content stays in the repo without being published. Restoring one means moving it
+back out and renumbering the active directories so they stay sequential, which Instruqt requires.
 
 > [!CAUTION]
 > **Number challenge directories from `01`, never `00`.** A challenge in a `00-`

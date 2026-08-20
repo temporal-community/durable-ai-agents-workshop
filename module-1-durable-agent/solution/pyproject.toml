@@ -1,0 +1,13 @@
+[project]
+name = "durable-agent"
+version = "0.1.0"
+description = "An OpenAI Agents SDK agent running as a Temporal workflow"
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = [
+    "temporalio[openai-agents,opentelemetry]>=1.17.0,<2",
+    "httpx>=0.27",
+]
+
+[tool.uv]
+package = false

@@ -213,7 +213,7 @@ There is no GitHub Actions pipeline; publishing is manual, and what you run depe
   ```bash
   docker buildx build --platform linux/amd64 \
     -f instruqt/docker/Dockerfile \
-    -t <your-registry>/durable-ai-agents-modules-sandbox:latest --push .
+    -t trainwithshubham/durable-ai-agents-workshop-sandbox:latest --push .
   ```
 
 `instruqt track test` runs the track's local files against the deployed image, so it's the way to

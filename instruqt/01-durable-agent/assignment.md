@@ -135,7 +135,8 @@ Toggle **OpenAI** back on. The next attempt succeeds and the same execution fini
 
 ## Now read the answer again
 
-Ask it about the weather and it will tell you something confident and invented. It has no tools.
+Ask it about the weather. It either makes up a temperature or tells you plainly that it cannot
+look up real-time weather. Either way, it has no path to the real answer. It has no tools.
 
 That is module 2.
 

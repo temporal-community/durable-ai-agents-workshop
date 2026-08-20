@@ -12,7 +12,6 @@ with workflow.unsafe.imports_passed_through():
 
 INSTRUCTIONS = """
 You are a helpful assistant. Answer the user's question directly and concisely.
-If you do not know something, say so.
 """
 
 

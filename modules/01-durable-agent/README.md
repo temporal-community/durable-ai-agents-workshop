@@ -20,8 +20,9 @@ Open the Temporal Web UI and look at the event history. `invoke_model_activity` 
 activity, with its own retry policy, scheduled and completed like any other. The workflow code has
 no retry logic in it. That is what the plugin bought.
 
-Then read the answer. The agent has no tools, so anything it says about the weather is invented.
-Module 2 fixes that.
+Then read the answer. The agent has no tools, so it either makes up a temperature or tells you
+plainly that it cannot look up real-time weather. Either way, it has no path to the real answer.
+Module 2 gives it one.
 
 ## Prerequisites
 

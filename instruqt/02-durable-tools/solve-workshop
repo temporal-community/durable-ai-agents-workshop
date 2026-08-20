@@ -2,12 +2,12 @@
 set -euxo pipefail
 source /root/.bashrc || true
 
-cp -rf /opt/workshop/module-2-durable-tools/solution/. /root/workshop/module-2-durable-tools/exercise/
+cp -rf /opt/workshop/modules/02-durable-tools/solution/. /root/workshop/modules/02-durable-tools/exercise/
 
 pkill -f "python -m worker" || true
 sleep 1
 
-cd /root/workshop/module-2-durable-tools/solution
+cd /root/workshop/modules/02-durable-tools/solution
 nohup uv run python -m worker > /tmp/solve-02-durable-tools-worker.log 2>&1 &
 WORKER_PID=$!
 sleep 12

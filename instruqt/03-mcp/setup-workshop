@@ -5,4 +5,4 @@ source /root/.bashrc || true
 pkill -f "python -m worker" || true
 sleep 1
 
-echo "==> module-3-mcp ready."
+echo "==> 03-mcp ready."

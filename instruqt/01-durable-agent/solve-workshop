@@ -2,12 +2,12 @@
 set -euxo pipefail
 source /root/.bashrc || true
 
-cp -rf /opt/workshop/module-1-durable-agent/solution/. /root/workshop/module-1-durable-agent/exercise/
+cp -rf /opt/workshop/modules/01-durable-agent/solution/. /root/workshop/modules/01-durable-agent/exercise/
 
 pkill -f "python -m worker" || true
 sleep 1
 
-cd /root/workshop/module-1-durable-agent/solution
+cd /root/workshop/modules/01-durable-agent/solution
 nohup uv run python -m worker > /tmp/solve-01-durable-agent-worker.log 2>&1 &
 WORKER_PID=$!
 sleep 12

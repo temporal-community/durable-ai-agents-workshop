@@ -18,11 +18,11 @@ export OPENAI_MODEL="${OPENAI_MODEL:-gpt-4o}"
 LITELLM_PROXY_HOST="${LITELLM_PROXY_HOST:-litellm-instruqt.tmprl-demo.cloud}"
 
 MODULES=(
-    module-1-durable-agent
-    module-2-durable-tools
-    module-3-mcp
-    module-4-failure
-    mcp-server
+    modules/01-durable-agent
+    modules/02-durable-tools
+    modules/03-mcp
+    modules/04-failure
+    modules/mcp-server
 )
 
 patch_runtime_proxy_config() {
@@ -85,8 +85,9 @@ mint_litellm_token() {
 
 # 1. Stage the modules into the attendee's writable copy.
 if [ ! -d /root/workshop ]; then
-    mkdir -p /root/workshop
+    mkdir -p /root/workshop/modules
     for module in "${MODULES[@]}"; do
+        mkdir -p "/root/workshop/$(dirname "${module}")"
         cp -r "/opt/workshop/${module}" "/root/workshop/${module}"
     done
 fi
@@ -135,7 +136,7 @@ if [ -f /root/.litellm-env ]; then
     . /root/.litellm-env
     set +a
 fi
-export MCP_SERVER_HOME=/root/workshop/mcp-server
+export MCP_SERVER_HOME=/root/workshop/modules/mcp-server
 BASHRC
 
 echo "==> Track setup complete."

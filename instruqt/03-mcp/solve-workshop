@@ -2,12 +2,12 @@
 set -euxo pipefail
 source /root/.bashrc || true
 
-cp -rf /opt/workshop/module-3-mcp/solution/. /root/workshop/module-3-mcp/exercise/
+cp -rf /opt/workshop/modules/03-mcp/solution/. /root/workshop/modules/03-mcp/exercise/
 
 pkill -f "python -m worker" || true
 sleep 1
 
-cd /root/workshop/module-3-mcp/solution
+cd /root/workshop/modules/03-mcp/solution
 nohup uv run python -m worker > /tmp/solve-03-mcp-worker.log 2>&1 &
 WORKER_PID=$!
 sleep 12

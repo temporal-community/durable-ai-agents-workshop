@@ -26,11 +26,11 @@ tabs:
 - title: Worker
   type: terminal
   hostname: workshop
-  workdir: /root/workshop/module-3-mcp/exercise
+  workdir: /root/workshop/modules/03-mcp/exercise
 - title: Starter
   type: terminal
   hostname: workshop
-  workdir: /root/workshop/module-3-mcp/exercise
+  workdir: /root/workshop/modules/03-mcp/exercise
 - title: Temporal UI
   type: service
   hostname: workshop
@@ -44,11 +44,11 @@ tabs:
 - title: Editor
   type: code
   hostname: workshop
-  path: /root/workshop/module-3-mcp/exercise
+  path: /root/workshop/modules/03-mcp/exercise
 - title: Solution
   type: code
   hostname: workshop
-  path: /root/workshop/module-3-mcp/solution
+  path: /root/workshop/modules/03-mcp/solution
 difficulty: basic
 timelimit: 1800
 ---

@@ -26,11 +26,11 @@ tabs:
 - title: Worker
   type: terminal
   hostname: workshop
-  workdir: /root/workshop/module-2-durable-tools/exercise
+  workdir: /root/workshop/modules/02-durable-tools/exercise
 - title: Starter
   type: terminal
   hostname: workshop
-  workdir: /root/workshop/module-2-durable-tools/exercise
+  workdir: /root/workshop/modules/02-durable-tools/exercise
 - title: Temporal UI
   type: service
   hostname: workshop
@@ -44,11 +44,11 @@ tabs:
 - title: Editor
   type: code
   hostname: workshop
-  path: /root/workshop/module-2-durable-tools/exercise
+  path: /root/workshop/modules/02-durable-tools/exercise
 - title: Solution
   type: code
   hostname: workshop
-  path: /root/workshop/module-2-durable-tools/solution
+  path: /root/workshop/modules/02-durable-tools/solution
 difficulty: basic
 timelimit: 1800
 ---

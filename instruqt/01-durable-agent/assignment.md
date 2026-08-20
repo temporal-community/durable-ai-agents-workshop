@@ -26,11 +26,11 @@ tabs:
 - title: Worker
   type: terminal
   hostname: workshop
-  workdir: /root/workshop/module-1-durable-agent/exercise
+  workdir: /root/workshop/modules/01-durable-agent/exercise
 - title: Starter
   type: terminal
   hostname: workshop
-  workdir: /root/workshop/module-1-durable-agent/exercise
+  workdir: /root/workshop/modules/01-durable-agent/exercise
 - title: Temporal UI
   type: service
   hostname: workshop
@@ -44,11 +44,11 @@ tabs:
 - title: Editor
   type: code
   hostname: workshop
-  path: /root/workshop/module-1-durable-agent/exercise
+  path: /root/workshop/modules/01-durable-agent/exercise
 - title: Solution
   type: code
   hostname: workshop
-  path: /root/workshop/module-1-durable-agent/solution
+  path: /root/workshop/modules/01-durable-agent/solution
 difficulty: basic
 timelimit: 1800
 ---
@@ -68,7 +68,7 @@ Twelve lines of workflow code, one LLM call, and an event history that already k
 
 ## What Changed
 
-Nothing yet. This is the starting point. Three files in `module-1-durable-agent/exercise`:
+Nothing yet. This is the starting point. Three files in `modules/01-durable-agent/exercise`:
 
 - `agent_workflow.py` builds an `Agent` and awaits `Runner.run(...)`. That is the whole workflow.
 - `worker.py` registers `OpenAIAgentsPlugin`. The plugin turns the SDK's model calls into activities.

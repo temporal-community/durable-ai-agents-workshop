@@ -27,19 +27,19 @@ RUN curl -sSf https://temporal.download/cli.sh | sh
 ENV PATH="${PATH}:/root/.temporalio/bin"
 
 # ── 4. Workshop source ───────────────────────────────────────────────────────
-COPY module-1-durable-agent/ /opt/workshop/module-1-durable-agent/
-COPY module-2-durable-tools/ /opt/workshop/module-2-durable-tools/
-COPY module-3-mcp/           /opt/workshop/module-3-mcp/
-COPY module-4-failure/       /opt/workshop/module-4-failure/
-COPY mcp-server/             /opt/workshop/mcp-server/
+COPY modules/01-durable-agent/ /opt/workshop/modules/01-durable-agent/
+COPY modules/02-durable-tools/ /opt/workshop/modules/02-durable-tools/
+COPY modules/03-mcp/           /opt/workshop/modules/03-mcp/
+COPY modules/04-failure/       /opt/workshop/modules/04-failure/
+COPY modules/mcp-server/      /opt/workshop/modules/mcp-server/
 
 # ── 5. Python deps (exercise/ and solution/ each need their own venv) ───────
-RUN for module in module-1-durable-agent module-2-durable-tools module-3-mcp module-4-failure; do \
+RUN for module in modules/01-durable-agent modules/02-durable-tools modules/03-mcp modules/04-failure; do \
         for variant in exercise solution; do \
             (cd "/opt/workshop/${module}/${variant}" && uv sync); \
         done; \
     done \
-    && (cd /opt/workshop/mcp-server && uv sync)
+    && (cd /opt/workshop/modules/mcp-server && uv sync)
 
 # ── 6. mitmproxy + CA cert ───────────────────────────────────────────────────
 RUN python3 -m venv /opt/mitmproxy-venv \
@@ -55,7 +55,7 @@ RUN mitmdump --listen-port 8889 --set block_global=false & \
        /usr/local/share/ca-certificates/mitmproxy-ca.crt \
     && update-ca-certificates \
     && MITM_CA=/root/.mitmproxy/mitmproxy-ca-cert.pem; \
-    for module in module-1-durable-agent module-2-durable-tools module-3-mcp module-4-failure; do \
+    for module in modules/01-durable-agent modules/02-durable-tools modules/03-mcp modules/04-failure; do \
         for variant in exercise solution; do \
             bundle="/opt/workshop/${module}/${variant}/.venv/lib/python3.12/site-packages/certifi/cacert.pem"; \
             [ -f "$bundle" ] && cat "$MITM_CA" >> "$bundle" && echo "Patched certifi in ${module}/${variant}"; \
@@ -74,7 +74,7 @@ RUN echo '' >> /etc/bash.bashrc \
     && echo '# Workshop environment' >> /etc/bash.bashrc \
     && echo 'export PATH=$PATH:/root/.temporalio/bin:/usr/local/bin' >> /etc/bash.bashrc \
     && echo 'export TEMPORAL_ADDRESS="127.0.0.1:7233"' >> /etc/bash.bashrc \
-    && echo 'export MCP_SERVER_HOME=/root/workshop/mcp-server' >> /etc/bash.bashrc \
+    && echo 'export MCP_SERVER_HOME=/root/workshop/modules/mcp-server' >> /etc/bash.bashrc \
     && echo 'export PYTHONUNBUFFERED=1' >> /etc/bash.bashrc \
     && echo 'export HTTP_PROXY="http://127.0.0.1:8888"' >> /etc/bash.bashrc \
     && echo 'export HTTPS_PROXY="http://127.0.0.1:8888"' >> /etc/bash.bashrc \

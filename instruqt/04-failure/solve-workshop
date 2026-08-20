@@ -2,12 +2,12 @@
 set -euxo pipefail
 source /root/.bashrc || true
 
-cp -rf /opt/workshop/module-4-failure/solution/. /root/workshop/module-4-failure/exercise/
+cp -rf /opt/workshop/modules/04-failure/solution/. /root/workshop/modules/04-failure/exercise/
 
 pkill -f "python -m worker" || true
 sleep 1
 
-cd /root/workshop/module-4-failure/solution
+cd /root/workshop/modules/04-failure/solution
 nohup uv run python -m worker > /tmp/solve-04-failure-worker.log 2>&1 &
 WORKER_PID=$!
 sleep 12

@@ -25,11 +25,11 @@ tabs:
 - title: Worker
   type: terminal
   hostname: workshop
-  workdir: /root/workshop/module-4-failure/exercise
+  workdir: /root/workshop/modules/04-failure/exercise
 - title: Starter
   type: terminal
   hostname: workshop
-  workdir: /root/workshop/module-4-failure/exercise
+  workdir: /root/workshop/modules/04-failure/exercise
 - title: Temporal UI
   type: service
   hostname: workshop
@@ -43,11 +43,11 @@ tabs:
 - title: Editor
   type: code
   hostname: workshop
-  path: /root/workshop/module-4-failure/exercise
+  path: /root/workshop/modules/04-failure/exercise
 - title: Solution
   type: code
   hostname: workshop
-  path: /root/workshop/module-4-failure/solution
+  path: /root/workshop/modules/04-failure/solution
 difficulty: basic
 timelimit: 1800
 ---
@@ -100,7 +100,7 @@ Start another long workflow from the [button label="Starter" background="#444CE7
 then, while it is mid-loop, kill the worker from that same terminal:
 
 ```bash,run
-pkill -9 -f "module-4-failure"
+pkill -9 -f "modules/04-failure"
 ```
 
 The `-9` matters. A polite `SIGTERM` lets the SDK drain the activity it is holding, which is not the

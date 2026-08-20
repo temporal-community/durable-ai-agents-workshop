@@ -5,4 +5,4 @@ source /root/.bashrc || true
 pkill -f "python -m worker" || true
 sleep 1
 
-echo "==> module-2-durable-tools ready."
+echo "==> 02-durable-tools ready."

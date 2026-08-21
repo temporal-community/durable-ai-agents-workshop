@@ -29,7 +29,7 @@ This workshop was inspired by [Cornelia Davis'](https://www.linkedin.com/in/corn
 | [`modules/01-durable-agent`](modules/01-durable-agent/) | An OpenAI Agents SDK agent inside a Temporal workflow. One LLM call, already durable, no tools yet. | [`modules/01-durable-agent/README.md`](modules/01-durable-agent/README.md) |
 | [`modules/02-durable-tools`](modules/02-durable-tools/) | Tools become Temporal activities via `activity_as_tool`. Each tool call gets its own retry policy and history entry. | [`modules/02-durable-tools/README.md`](modules/02-durable-tools/README.md) |
 | [`modules/03-mcp`](modules/03-mcp/) | A local MCP server (`modules/mcp-server`) joins the activity tools. Each `listTools`/`callTool` becomes a Temporal activity too. | [`modules/03-mcp/README.md`](modules/03-mcp/README.md) |
-| [`modules/04-failure`](modules/04-failure/) | The module 3 agent, unchanged, put under three failures: a dead network, a killed worker, and a request that should never be retried. | [`modules/04-failure/README.md`](modules/04-failure/README.md) |
+| [`modules/04-failure`](modules/04-failure/) | The module 3 agent put under three failures: a dead network, a killed worker (with a durable pause giving a reliable kill window), and a request that should never be retried. | [`modules/04-failure/README.md`](modules/04-failure/README.md) |
 
 ## How to work through the workshop
 
@@ -96,6 +96,10 @@ you can see the agent's reasoning alongside the Temporal-side history.
 
 This repo is also the source for a hands-on Instruqt lab: five challenges (four modules plus a
 closing quiz) in a browser-based sandbox, no local setup required.
+
+Live at https://play.instruqt.com/manage/temporal/tracks/temporal-durable-ai-agents-modules, currently
+in `maintenance: true` (authors only). Flip that to `false` in `instruqt/track.yml` and push when
+ready for attendees.
 
 ### What the sandbox image bakes in
 
@@ -179,8 +183,10 @@ capped and expires in a day.
 
 ### Network control panel
 
-The control panel toggles external services on and off mid-module so attendees can watch Temporal
-retry a failing activity and resume once the service comes back: OpenAI and Weather. It is driven by
+The control panel toggles four external service groups on and off mid-module: OpenAI, Weather,
+Geolocation, and IP Info. Attendees watch Temporal retry a failing activity and resume once the
+service comes back. Only OpenAI and Weather are exercised by the modules' "Break It" sections; the
+other two exist in the panel but aren't part of any lesson yet. Driven by
 `instruqt/docker/proxy/controlpanel.py` and `toggle_addon.py`, both started by
 `track_scripts/setup-workshop`.
 

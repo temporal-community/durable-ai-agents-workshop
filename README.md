@@ -5,9 +5,15 @@ A 2-hour path from a bare agent to one that survives an outage, built with the
 for durable execution. Four modules, each adding one thing, so you can see before and after in the
 Temporal Web UI.
 
-## Author
+## Authors
 
-## 🚀 Nikolay Advolodkin
+### Shubham Londhe - this module track
+
+Developer Advocate at Temporal, and founder of TrainWithShubham. DevOps engineer and technical
+educator focused on crash-proof infrastructure for agentic AI.
+[LinkedIn](https://www.linkedin.com/in/shubhamlondhe1996)
+
+### Nikolay Advolodkin - original workshop
 
 🤖 **AI Agents & Distributed Systems** specializing in durable execution, Temporal workflows, and AI-powered applications
 

@@ -1,0 +1,18 @@
+#!/bin/bash
+set -euxo pipefail
+source /root/.bashrc || true
+
+cp -rf /opt/workshop/modules/04-failure/solution/. /root/workshop/modules/04-failure/exercise/
+
+pkill -f "python -m worker" || true
+sleep 1
+
+cd /root/workshop/modules/04-failure/solution
+nohup uv run python -m worker > /tmp/solve-04-failure-worker.log 2>&1 &
+WORKER_PID=$!
+sleep 12
+
+timeout 120 uv run python -m start_workflow "List the Saturday sessions, then tell me the weather in Melbourne." || true
+
+kill "$WORKER_PID" 2>/dev/null || true
+exit 0

@@ -1,0 +1,12 @@
+[
+  {"id": "s-01", "title": "Durable Execution in Plain Python", "speaker": "Ada Okonkwo", "day": "Friday", "time": "09:30", "room": "Riverbank 1", "track": "Core", "city": "Melbourne"},
+  {"id": "s-02", "title": "Type Hints That Earn Their Keep", "speaker": "Bruno Silva", "day": "Friday", "time": "11:00", "room": "Riverbank 2", "track": "Language", "city": "Melbourne"},
+  {"id": "s-03", "title": "Async Without Tears", "speaker": "Chen Wei", "day": "Friday", "time": "13:30", "room": "Riverbank 1", "track": "Core", "city": "Melbourne"},
+  {"id": "s-04", "title": "Building Durable AI Agents", "speaker": "Dara Nwosu", "day": "Friday", "time": "15:00", "room": "Skyline Hall", "track": "AI", "city": "Melbourne"},
+  {"id": "s-05", "title": "MCP for People Who Ship", "speaker": "Elif Demir", "day": "Saturday", "time": "09:30", "room": "Skyline Hall", "track": "AI", "city": "Melbourne"},
+  {"id": "s-06", "title": "Testing Workflows You Cannot Reproduce", "speaker": "Farid Haddad", "day": "Saturday", "time": "11:00", "room": "Riverbank 1", "track": "Testing", "city": "Melbourne"},
+  {"id": "s-07", "title": "Retries Are Not a Strategy", "speaker": "Grace Tupou", "day": "Saturday", "time": "13:30", "room": "Skyline Hall", "track": "AI", "city": "Melbourne"},
+  {"id": "s-08", "title": "Packaging in 2026", "speaker": "Hana Suzuki", "day": "Saturday", "time": "15:00", "room": "Riverbank 2", "track": "Tooling", "city": "Melbourne"},
+  {"id": "s-09", "title": "Observability for Agent Loops", "speaker": "Ivan Petrov", "day": "Sunday", "time": "10:00", "room": "Skyline Hall", "track": "AI", "city": "Sydney"},
+  {"id": "s-10", "title": "Closing Keynote: Boring Reliability", "speaker": "Jo Whitlam", "day": "Sunday", "time": "16:00", "room": "Skyline Hall", "track": "Keynote", "city": "Sydney"}
+]

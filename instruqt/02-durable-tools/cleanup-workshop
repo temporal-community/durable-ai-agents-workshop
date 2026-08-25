@@ -1,5 +1,4 @@
 #!/bin/bash
 set -euo pipefail
 pkill -f "python -m worker" || true
-pkill -f "temporal server" || true
-echo "Track cleanup: OK"
+sleep 1

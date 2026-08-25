@@ -1,0 +1,18 @@
+#!/bin/bash
+set -euxo pipefail
+source /root/.bashrc || true
+
+cp -rf /opt/workshop/modules/03-mcp/solution/. /root/workshop/modules/03-mcp/exercise/
+
+pkill -f "python -m worker" || true
+sleep 1
+
+cd /root/workshop/modules/03-mcp/solution
+nohup uv run python -m worker > /tmp/solve-03-mcp-worker.log 2>&1 &
+WORKER_PID=$!
+sleep 12
+
+timeout 120 uv run python -m start_workflow "Which AI track sessions are on Saturday, and what is the weather in Melbourne?" || true
+
+kill "$WORKER_PID" 2>/dev/null || true
+exit 0

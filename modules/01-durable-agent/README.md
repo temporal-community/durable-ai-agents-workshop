@@ -1,0 +1,50 @@
+# Module 1: A Durable Agent
+
+An OpenAI Agents SDK agent that runs inside a Temporal workflow. No tools yet, one LLM call, and
+already durable.
+
+## Architecture
+
+- `agent_workflow.py` builds an `Agent` and calls `Runner.run(...)`. That is the whole workflow.
+- `OpenAIAgentsPlugin` (registered on both the client and the worker) turns the SDK's model calls
+  into Temporal activities. You never write `execute_activity` yourself.
+- `ModelActivityParameters` sets the timeout for each of those model activities.
+
+The pydantic pre-imports at the top of `agent_workflow.py` are there so the workflow sandbox
+snapshots pydantic before the first `Agent(...)` is constructed. Without them the sandbox warns
+about modules imported after the workflow loaded.
+
+## What to notice
+
+Open the Temporal Web UI and look at the event history. `invoke_model_activity` is its own
+activity, with its own retry policy, scheduled and completed like any other. The workflow code has
+no retry logic in it. That is what the plugin bought.
+
+Then read the answer. The agent has no tools, so it either makes up a temperature or tells you
+plainly that it cannot look up real-time weather. Either way, it has no path to the real answer.
+Module 2 gives it one.
+
+## Prerequisites
+
+- Python 3.12+
+- [uv](https://docs.astral.sh/uv/)
+- [Temporal CLI](https://docs.temporal.io/cli)
+- `OPENAI_API_KEY` in your environment
+
+## Run it
+
+```bash
+temporal server start-dev          # once, in its own terminal
+cd exercise && uv sync
+```
+
+Fill in the `TODO` in `agent_workflow.py`, then:
+
+```bash
+uv run python -m worker            # terminal 2, stays running
+uv run python -m start_workflow "What is the weather in Melbourne?"   # terminal 3
+```
+
+Stuck? Compare with `solution/`.
+
+Task queue: `durable-agent-tq`. Traces also land at https://platform.openai.com/traces.

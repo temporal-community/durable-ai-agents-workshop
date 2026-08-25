@@ -1,4 +1,4 @@
-slug: temporal-durable-ai-agents-modules
+slug: temporal-durable-ai-agents-workshop
 id: ov7ek31f3rvz
 title: Building Durable AI Agents
 teaser: Four modules from a bare agent to one that survives an outage. OpenAI Agents
@@ -49,5 +49,5 @@ lab_config:
   hideStopButton: false
   default_layout: AssignmentLeft
   default_layout_sidebar_size: 33
-checksum: "10182007872689326734"
+checksum: "5553155129201665544"
 enhanced_loading: false

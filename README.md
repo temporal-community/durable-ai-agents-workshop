@@ -103,9 +103,9 @@ you can see the agent's reasoning alongside the Temporal-side history.
 This repo is also the source for a hands-on Instruqt lab: five challenges (four modules plus a
 closing quiz) in a browser-based sandbox, no local setup required.
 
-Live at https://play.instruqt.com/manage/temporal/tracks/temporal-durable-ai-agents-modules, currently
-in `maintenance: true` (authors only). Flip that to `false` in `instruqt/track.yml` and push when
-ready for attendees.
+Live at https://play.instruqt.com/manage/temporal/tracks/temporal-durable-ai-agents-workshop
+(manage link, internal use only), currently in `maintenance: true` (authors only). Flip that to
+`false` in `instruqt/track.yml` and push when ready for attendees.
 
 ### What the sandbox image bakes in
 

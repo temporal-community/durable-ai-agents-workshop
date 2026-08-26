@@ -55,7 +55,7 @@ tabs:
   type: code
   hostname: workshop
   path: /root/workshop/modules/04-failure/solution
-- id: ""
+- id: 8i3xw031bxja
   title: MCP Server
   type: code
   hostname: workshop

@@ -55,7 +55,7 @@ tabs:
   type: code
   hostname: workshop
   path: /root/workshop/modules/03-mcp/solution
-- id: ""
+- id: 9xjtogk3eufr
   title: MCP Server
   type: code
   hostname: workshop

@@ -55,6 +55,11 @@ tabs:
   type: code
   hostname: workshop
   path: /root/workshop/modules/04-failure/solution
+- id: ""
+  title: MCP Server
+  type: code
+  hostname: workshop
+  path: /root/workshop/modules/mcp-server
 difficulty: basic
 timelimit: 1800
 enhanced_loading: null
@@ -72,6 +77,7 @@ Same agent as module 3. Three failures, one code change.
 > - [button label="Network Control Panel" background="#444CE7"](tab-3) turns external services off.
 > - [button label="Editor" background="#444CE7"](tab-4) is your working copy.
 > - [button label="Solution" background="#444CE7"](tab-5) is the finished code.
+> - [button label="MCP Server" background="#444CE7"](tab-6) is the server's own source, editable too.
 
 ## Start the Worker
 

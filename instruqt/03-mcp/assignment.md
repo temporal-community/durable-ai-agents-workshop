@@ -55,6 +55,11 @@ tabs:
   type: code
   hostname: workshop
   path: /root/workshop/modules/03-mcp/solution
+- id: ""
+  title: MCP Server
+  type: code
+  hostname: workshop
+  path: /root/workshop/modules/mcp-server
 difficulty: basic
 timelimit: 1800
 enhanced_loading: null
@@ -72,10 +77,11 @@ Conference data over MCP, weather over activities, both durable, one agent.
 > - [button label="Network Control Panel" background="#444CE7"](tab-3) turns external services off.
 > - [button label="Editor" background="#444CE7"](tab-4) is your working copy.
 > - [button label="Solution" background="#444CE7"](tab-5) is the finished code.
+> - [button label="MCP Server" background="#444CE7"](tab-6) is the server's own source, editable too.
 
 ## What Changed
 
-The server lives at `/root/workshop/mcp-server/server.py`. Three tools over `sessions.json`:
+The server lives at `/root/workshop/modules/mcp-server/server.py`, open in the [button label="MCP Server" background="#444CE7"](tab-6) tab. Three tools over `sessions.json`:
 `list_sessions`, `get_session`, `search_speakers`. Nothing to install, nothing to clone.
 
 Two pieces connect it:

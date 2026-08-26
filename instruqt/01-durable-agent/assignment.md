@@ -102,7 +102,7 @@ Leave it and move on.
 Click the [button label="Starter" background="#444CE7"](tab-1) terminal.
 
 ```bash,run
-uv run python -m start_workflow "What is the weather in Melbourne right now?"
+uv run python -m start_workflow "What is the weather in Brisbane right now?"
 ```
 
 ## Watch the Event History

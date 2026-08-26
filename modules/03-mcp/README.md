@@ -58,7 +58,7 @@ Two `TODO`s, one in `worker.py` and one in `agent_workflow.py`. Then:
 
 ```bash
 uv run python -m worker
-uv run python -m start_workflow "Which AI track sessions are on Saturday, and what is the weather in Melbourne?"
+uv run python -m start_workflow "Which Data & AI sessions are on Thursday, and what is the weather in Brisbane?"
 ```
 
 Task queue: `mcp-agent-tq`.

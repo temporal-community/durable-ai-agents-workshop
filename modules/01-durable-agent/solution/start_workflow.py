@@ -24,7 +24,7 @@ async def main() -> None:
     config.setdefault("target_host", "localhost:7233")
     client = await Client.connect(**config, plugins=[plugin])
 
-    question = sys.argv[1] if len(sys.argv) > 1 else "What is the weather in Melbourne?"
+    question = sys.argv[1] if len(sys.argv) > 1 else "What is the weather in Brisbane?"
 
     # trace() gives the workflow's spans a parent, so the Agents SDK can export them.
     with trace("AgentWorkflow"):

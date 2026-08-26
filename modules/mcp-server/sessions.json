@@ -1,12 +1,12 @@
 [
-  {"id": "s-01", "title": "Durable Execution in Plain Python", "speaker": "Ada Okonkwo", "day": "Friday", "time": "09:30", "room": "Riverbank 1", "track": "Core", "city": "Melbourne"},
-  {"id": "s-02", "title": "Type Hints That Earn Their Keep", "speaker": "Bruno Silva", "day": "Friday", "time": "11:00", "room": "Riverbank 2", "track": "Language", "city": "Melbourne"},
-  {"id": "s-03", "title": "Async Without Tears", "speaker": "Chen Wei", "day": "Friday", "time": "13:30", "room": "Riverbank 1", "track": "Core", "city": "Melbourne"},
-  {"id": "s-04", "title": "Building Durable AI Agents", "speaker": "Dara Nwosu", "day": "Friday", "time": "15:00", "room": "Skyline Hall", "track": "AI", "city": "Melbourne"},
-  {"id": "s-05", "title": "MCP for People Who Ship", "speaker": "Elif Demir", "day": "Saturday", "time": "09:30", "room": "Skyline Hall", "track": "AI", "city": "Melbourne"},
-  {"id": "s-06", "title": "Testing Workflows You Cannot Reproduce", "speaker": "Farid Haddad", "day": "Saturday", "time": "11:00", "room": "Riverbank 1", "track": "Testing", "city": "Melbourne"},
-  {"id": "s-07", "title": "Retries Are Not a Strategy", "speaker": "Grace Tupou", "day": "Saturday", "time": "13:30", "room": "Skyline Hall", "track": "AI", "city": "Melbourne"},
-  {"id": "s-08", "title": "Packaging in 2026", "speaker": "Hana Suzuki", "day": "Saturday", "time": "15:00", "room": "Riverbank 2", "track": "Tooling", "city": "Melbourne"},
-  {"id": "s-09", "title": "Observability for Agent Loops", "speaker": "Ivan Petrov", "day": "Sunday", "time": "10:00", "room": "Skyline Hall", "track": "AI", "city": "Sydney"},
-  {"id": "s-10", "title": "Closing Keynote: Boring Reliability", "speaker": "Jo Whitlam", "day": "Sunday", "time": "16:00", "room": "Skyline Hall", "track": "Keynote", "city": "Sydney"}
+  {"id": "s-01", "title": "30 to 70 PRs a day: How we managed to not wreck our systems", "speaker": "Liz Fong-Jones", "day": "Thursday", "time": "09:15", "room": "Ballroom 1", "track": "General", "city": "Brisbane"},
+  {"id": "s-02", "title": "Kubernetes as LEGO: Building Platforms one block at a time", "speaker": "Dipendra Paudel", "day": "Thursday", "time": "10:45", "room": "Ballroom 1", "track": "Platform Engineering", "city": "Brisbane"},
+  {"id": "s-03", "title": "AI-assisted coding, Python and dbt: taking Chronos live in two days", "speaker": "Jay Stein & Sergio Pintaldi", "day": "Thursday", "time": "10:45", "room": "Ballroom 3", "track": "Data & AI", "city": "Brisbane"},
+  {"id": "s-04", "title": "Why Your ML Pipeline Needs an Agent (and How to Build One)", "speaker": "Yusuke Shibui & Prashanth Gurram", "day": "Thursday", "time": "12:05", "room": "Ballroom 3", "track": "Data & AI", "city": "Brisbane"},
+  {"id": "s-05", "title": "What Happened in Production?! Instrumenting with OpenTelemetry", "speaker": "David Bell", "day": "Thursday", "time": "14:40", "room": "Ballroom 1", "track": "Platform Engineering", "city": "Brisbane"},
+  {"id": "s-06", "title": "Stop Prompting, Start Composing: Agent Skills in Practice", "speaker": "Marty Kieliszek", "day": "Thursday", "time": "14:40", "room": "Ballroom 3", "track": "Data & AI", "city": "Brisbane"},
+  {"id": "s-07", "title": "Just Enough Reliability", "speaker": "Shaun O'Keefe", "day": "Thursday", "time": "15:15", "room": "Ballroom 1", "track": "Platform Engineering", "city": "Brisbane"},
+  {"id": "s-08", "title": "Why Australians don't trust AI and what that means for all of us", "speaker": "Cam Wilson", "day": "Friday", "time": "09:15", "room": "Ballroom 1", "track": "General", "city": "Brisbane"},
+  {"id": "s-09", "title": "40,000 CVEs and Counting: What 60 Years of AppSec Tells Us About 2026", "speaker": "Pedram Hayati", "day": "Friday", "time": "10:45", "room": "Ballroom 3", "track": "Cybersecurity", "city": "Brisbane"},
+  {"id": "s-10", "title": "Vibe-Check Your Vibe Code: Surviving the Era of Agentic Open Source Dependencies", "speaker": "Nicky Ringland & Ash", "day": "Friday", "time": "13:30", "room": "Ballroom 3", "track": "Cybersecurity", "city": "Brisbane"}
 ]

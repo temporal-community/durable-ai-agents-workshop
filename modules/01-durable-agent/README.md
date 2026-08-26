@@ -42,7 +42,7 @@ Fill in the `TODO` in `agent_workflow.py`, then:
 
 ```bash
 uv run python -m worker            # terminal 2, stays running
-uv run python -m start_workflow "What is the weather in Melbourne?"   # terminal 3
+uv run python -m start_workflow "What is the weather in Brisbane?"   # terminal 3
 ```
 
 Stuck? Compare with `solution/`.

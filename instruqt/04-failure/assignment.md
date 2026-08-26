@@ -92,7 +92,7 @@ uv run python -m worker
 Click the [button label="Starter" background="#444CE7"](tab-1) terminal and start a long one.
 
 ```bash,run
-uv run python -m start_workflow "List the Saturday sessions, then tell me the weather in Melbourne and in Sydney."
+uv run python -m start_workflow "List the Friday sessions, then tell me the weather in Brisbane."
 ```
 
 While it is running, click the [button label="Network Control Panel" background="#444CE7"](tab-3)

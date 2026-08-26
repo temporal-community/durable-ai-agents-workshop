@@ -75,7 +75,7 @@ Same as module 1.
 ```bash
 cd exercise && uv sync
 uv run python -m worker
-uv run python -m start_workflow "Which AI track sessions are on Saturday, and what is the weather in Melbourne?"
+uv run python -m start_workflow "Which Data & AI sessions are on Thursday, and what is the weather in Brisbane?"
 ```
 
 Task queue: `failure-lab-tq`.

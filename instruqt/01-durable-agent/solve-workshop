@@ -12,7 +12,7 @@ nohup uv run python -m worker > /tmp/solve-01-durable-agent-worker.log 2>&1 &
 WORKER_PID=$!
 sleep 12
 
-timeout 120 uv run python -m start_workflow "What is the weather in Melbourne right now?" || true
+timeout 120 uv run python -m start_workflow "What is the weather in Brisbane right now?" || true
 
 kill "$WORKER_PID" 2>/dev/null || true
 exit 0

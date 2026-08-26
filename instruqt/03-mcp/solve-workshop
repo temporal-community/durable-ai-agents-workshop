@@ -12,7 +12,7 @@ nohup uv run python -m worker > /tmp/solve-03-mcp-worker.log 2>&1 &
 WORKER_PID=$!
 sleep 12
 
-timeout 120 uv run python -m start_workflow "Which AI track sessions are on Saturday, and what is the weather in Melbourne?" || true
+timeout 120 uv run python -m start_workflow "Which Data & AI sessions are on Thursday, and what is the weather in Brisbane?" || true
 
 kill "$WORKER_PID" 2>/dev/null || true
 exit 0

@@ -112,7 +112,7 @@ Click the [button label="Starter" background="#444CE7"](tab-1) terminal. This qu
 sides: the schedule from MCP, the forecast from an activity.
 
 ```bash,run
-uv run python -m start_workflow "Which AI track sessions are on Saturday, and what is the weather in Melbourne?"
+uv run python -m start_workflow "Which Data & AI sessions are on Thursday, and what is the weather in Brisbane?"
 ```
 
 ## Watch the Event History

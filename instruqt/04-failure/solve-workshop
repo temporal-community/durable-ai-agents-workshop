@@ -12,7 +12,7 @@ nohup uv run python -m worker > /tmp/solve-04-failure-worker.log 2>&1 &
 WORKER_PID=$!
 sleep 12
 
-timeout 120 uv run python -m start_workflow "List the Saturday sessions, then tell me the weather in Melbourne." || true
+timeout 120 uv run python -m start_workflow "List the Friday sessions, then tell me the weather in Brisbane." || true
 
 kill "$WORKER_PID" 2>/dev/null || true
 exit 0

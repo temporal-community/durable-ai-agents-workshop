@@ -14,7 +14,7 @@ def list_sessions(day: str | None = None, track: str | None = None) -> list[dict
 
     Args:
         day: Day name, for example "Friday".
-        track: Track name, for example "AI".
+        track: Track name, for example "Data & AI".
     """
     results = SESSIONS
     if day:

@@ -20,8 +20,9 @@ of conference sessions. Read the whole thing. There is nothing to install and no
   and cleans up.
 - `stateless_mcp_server("sessions")` is the workflow-side handle passed to `Agent(mcp_servers=[...])`.
 
-`MCP_SERVER_HOME` points at the server directory. It defaults to the repo's `mcp-server/`, so you
-only set it if you move things.
+`MCP_SERVER_HOME` points at the server directory. It defaults to `modules/mcp-server/` relative to
+each module, so you only set it if you move things. In the Instruqt sandbox it has its own Editor
+tab, since it is not just a black box the workflow calls: you can read and change it too.
 
 ### Trade-off
 
